@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const Hero = () => {
     return (
-        <section className="relative bg-black text-white px-6 md:px-12 py-36 text-center overflow-hidden">
+        <section className="relative bg-black text-white px-6 md:px-12 pt-28 text-center overflow-hidden">
             {/* Background overlay */}
 
             <div className="relative z-10 max-w-4xl mx-auto">
@@ -18,7 +18,18 @@ export const Hero = () => {
                         നീ ആരാണെന്ന് അവരെ ഓർമിപ്പിച്ചു കൊള്ളുക!
                     </h2>
                 </motion.div>
+            </div>
 
+            <div className="text-center space-y-6 my-10">
+                <div className="aspect-w-16 aspect-h-9 rounded-3xl overflow-hidden shadow-2xl">
+                    <iframe
+                        className="w-full h-full"
+                        src="https://www.youtube.com/embed/placeholder1"
+                        title="Course Overview Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    />
+                </div>
             </div>
         </section>
     );

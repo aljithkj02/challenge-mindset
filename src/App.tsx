@@ -2,6 +2,7 @@ import { CTA } from "./components/CTA"
 import { Footer } from "./components/Footer"
 import { Hero } from "./components/Hero"
 import { Navbar } from "./components/Navbar"
+import { TestimonialSection } from "./components/Testimonial"
 import { VideoSection } from "./components/VideoSection"
 
 
@@ -12,6 +13,7 @@ function App() {
             <Navbar />
             <Hero />
             <VideoSection />
+            <TestimonialSection />
             <CTA />
             <Footer />
         </main>
