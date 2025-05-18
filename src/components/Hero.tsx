@@ -45,12 +45,13 @@ export const Hero = () => {
                         <iframe
                             key={`hero-video-${reloadKey}`}
                             className="w-full h-full"
-                            src="https://www.youtube.com/embed/QS0op-CzWxQ"
+                            src="https://drive.google.com/file/d/196cOpllsChCZV4KLQNMSaq8Qyp4NQejY/preview"
                             title="Course Overview Video"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         />
                     </div>
+
 
                 </div>
             </div>
