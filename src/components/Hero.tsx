@@ -41,14 +41,17 @@ export const Hero = () => {
                     </button>
 
                     {/* Iframe */}
-                    <iframe
-                        key={`hero-video-${reloadKey}`}
-                        className="w-full h-full"
-                        src="https://www.youtube.com/embed/placeholder1"
-                        title="Course Overview Video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    />
+                    <div className="max-w-4xl mx-auto aspect-video">
+                        <iframe
+                            key={`hero-video-${reloadKey}`}
+                            className="w-full h-full"
+                            src="https://www.youtube.com/embed/QS0op-CzWxQ"
+                            title="Course Overview Video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        />
+                    </div>
+
                 </div>
             </div>
         </section>

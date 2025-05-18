@@ -43,14 +43,16 @@ export const VideoSection = () => {
                     </button>
 
                     {/* YouTube Iframe */}
-                    <iframe
-                        key={`video-${reloadKey}`}
-                        className="w-full h-full"
-                        src="https://www.youtube.com/embed/placeholder1"
-                        title="Course Overview Video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    />
+                    <div className="max-w-4xl mx-auto aspect-video">
+                        <iframe
+                            key={`video-${reloadKey}`}
+                            className="w-full h-full"
+                            src="https://www.youtube.com/embed/OWwsuiKwv8c"
+                            title="Course Overview Video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        />
+                    </div>
                 </div>
             </div>
         </section>

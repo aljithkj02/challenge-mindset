@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FiRefreshCw } from "react-icons/fi";
 
 const testimonials = [
-    { id: 1, videoUrl: "https://www.youtube.com/embed/uZ-5KfE7kYo" },
-    { id: 2, videoUrl: "https://www.youtube.com/embed/iFTC1Ag15nE" },
-    { id: 3, videoUrl: "https://www.youtube.com/embed/XxXVJYLNt7A" },
+    { id: 1, videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562537/%E0%B4%9C%E0%B5%80%E0%B4%B5%E0%B4%BF%E0%B4%A4%E0%B4%82_%E0%B4%AE%E0%B4%BE%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF_%E0%B4%AE%E0%B4%B1%E0%B4%BF%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%B5%E0%B4%B0%E0%B5%81%E0%B4%9F%E0%B5%86_%E0%B4%85%E0%B4%A8%E0%B5%81%E0%B4%AD%E0%B4%B5%E0%B4%82_%E0%B4%87%E0%B4%A4%E0%B4%BE_%E0%B4%A8%E0%B4%BF%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B5%81%E0%B4%82_Ready_%E0%B4%86%E0%B4%A3%E0%B5%8B_muynko.mp4" },
+    { id: 2, videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747563959/Sreelakshmi_online-video-cutter.com_1_ruadp3.mp4" },
+    { id: 3, videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562811/20-40_%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B5%BC_%E0%B4%88_%E0%B4%85%E0%B4%A8%E0%B5%81%E0%B4%AD%E0%B4%B5%E0%B4%82_%E0%B4%95%E0%B4%BE%E0%B4%A3%E0%B4%BE%E0%B4%A4%E0%B5%86_%E0%B4%AA%E0%B5%8B%E0%B4%95%E0%B4%B0%E0%B5%81%E0%B4%A4%E0%B5%8D_Thought_Provoking_Interview_online-video-cutter.com_ryc8yl.mp4" },
+    { id: 4, videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747564223/Praseetha_online-video-cutter.com_1_b5n34u.mp4" },
 ];
 
 export const TestimonialSection = () => {
@@ -13,11 +14,23 @@ export const TestimonialSection = () => {
         testimonials.reduce((acc, t) => ({ ...acc, [t.id]: 0 }), {})
     );
 
+    const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
+
     const handleReload = (id: number) => {
         setReloadKeys((prev: any) => ({
             ...prev,
             [id]: prev[id] + 1,
         }));
+    };
+
+    const handlePlay = (id: number) => {
+        Object.entries(videoRefs.current).forEach(([key]) => {
+            const vid = videoRefs.current[parseInt(key)];
+            if (parseInt(key) !== id && vid && !vid.paused) {
+                vid.pause();
+                vid.currentTime = 0;
+            }
+        });
     };
 
     return (
@@ -66,16 +79,17 @@ export const TestimonialSection = () => {
                                 <FiRefreshCw className="w-5 h-5 cursor-pointer" />
                             </button>
 
-                            {/* Iframe */}
+                            {/* Video Element */}
                             <div className="aspect-video w-full">
-                                <iframe
+                                <video
                                     // @ts-ignore
                                     key={`${testimonial.id}-${reloadKeys[testimonial.id]}`}
+                                    // @ts-ignore
+                                    ref={(el) => (videoRefs.current[testimonial.id] = el)}
                                     src={testimonial.videoUrl}
-                                    title={`Testimonial ${testimonial.id}`}
+                                    controls
                                     className="w-full h-full"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
+                                    onPlay={() => handlePlay(testimonial.id)}
                                 />
                             </div>
                         </motion.div>
