@@ -19,7 +19,7 @@ const testimonials = [
     },
     {
         id: 3,
-        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562811/20-40_%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B5%BC_%E0%B4%88_%E0%B4%85%E0%B4%A8%E0%B5%81%E0%B4%AD%E0%B4%B5%E0%B4%82_%E0%B4%95%E0%B4%BE%E0%B4%A3%E0%B4%BE%E0%B4%A4%E0%B5%86_%E0%B4%AA%E0%B5%8B%E0%B4%95%E0%B4%B0%E0%B5%81%E0%B4%A4%E0%B5%8D_Thought_Provoking_Interview_online-video-cutter.com_ryc8yl.mp4",
+        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562811/vargees.mp4",
         poster: Thumb3
     },
     {
