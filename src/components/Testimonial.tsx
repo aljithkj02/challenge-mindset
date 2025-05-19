@@ -1,12 +1,32 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FiRefreshCw } from "react-icons/fi";
+import Thumb1 from '../assets/thumb1.jpg'
+import Thumb2 from '../assets/thumb2.jpg'
+import Thumb3 from '../assets/thumb3.jpg'
+import Thumb4 from '../assets/thumb4.jpg'
 
 const testimonials = [
-    { id: 1, videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562537/%E0%B4%9C%E0%B5%80%E0%B4%B5%E0%B4%BF%E0%B4%A4%E0%B4%82_%E0%B4%AE%E0%B4%BE%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF_%E0%B4%AE%E0%B4%B1%E0%B4%BF%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%B5%E0%B4%B0%E0%B5%81%E0%B4%9F%E0%B5%86_%E0%B4%85%E0%B4%A8%E0%B5%81%E0%B4%AD%E0%B4%B5%E0%B4%82_%E0%B4%87%E0%B4%A4%E0%B4%BE_%E0%B4%A8%E0%B4%BF%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B5%81%E0%B4%82_Ready_%E0%B4%86%E0%B4%A3%E0%B5%8B_muynko.mp4" },
-    { id: 2, videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747563959/Sreelakshmi_online-video-cutter.com_1_ruadp3.mp4" },
-    { id: 3, videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562811/20-40_%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B5%BC_%E0%B4%88_%E0%B4%85%E0%B4%A8%E0%B5%81%E0%B4%AD%E0%B4%B5%E0%B4%82_%E0%B4%95%E0%B4%BE%E0%B4%A3%E0%B4%BE%E0%B4%A4%E0%B5%86_%E0%B4%AA%E0%B5%8B%E0%B4%95%E0%B4%B0%E0%B5%81%E0%B4%A4%E0%B5%8D_Thought_Provoking_Interview_online-video-cutter.com_ryc8yl.mp4" },
-    { id: 4, videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747564223/Praseetha_online-video-cutter.com_1_b5n34u.mp4" },
+    {
+        id: 1,
+        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562537/%E0%B4%9C%E0%B5%80%E0%B4%B5%E0%B4%BF%E0%B4%A4%E0%B4%82_%E0%B4%AE%E0%B4%BE%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF_%E0%B4%AE%E0%B4%B1%E0%B4%BF%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%B5%E0%B4%B0%E0%B5%81%E0%B4%9F%E0%B5%86_%E0%B4%85%E0%B4%A8%E0%B5%81%E0%B4%AD%E0%B4%B5%E0%B4%82_%E0%B4%87%E0%B4%A4%E0%B4%BE_%E0%B4%A8%E0%B4%BF%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B5%81%E0%B4%82_Ready_%E0%B4%86%E0%B4%A3%E0%B5%8B_muynko.mp4",
+        poster: Thumb1
+    },
+    {
+        id: 2,
+        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747563959/Sreelakshmi_online-video-cutter.com_1_ruadp3.mp4",
+        poster: Thumb2
+    },
+    {
+        id: 3,
+        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562811/20-40_%E0%B4%AA%E0%B5%8D%E0%B4%B0%E0%B4%BE%E0%B4%AF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B5%BC_%E0%B4%88_%E0%B4%85%E0%B4%A8%E0%B5%81%E0%B4%AD%E0%B4%B5%E0%B4%82_%E0%B4%95%E0%B4%BE%E0%B4%A3%E0%B4%BE%E0%B4%A4%E0%B5%86_%E0%B4%AA%E0%B5%8B%E0%B4%95%E0%B4%B0%E0%B5%81%E0%B4%A4%E0%B5%8D_Thought_Provoking_Interview_online-video-cutter.com_ryc8yl.mp4",
+        poster: Thumb3
+    },
+    {
+        id: 4,
+        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747564223/Praseetha_online-video-cutter.com_1_b5n34u.mp4",
+        poster: Thumb4
+    },
 ];
 
 export const TestimonialSection = () => {
@@ -90,6 +110,7 @@ export const TestimonialSection = () => {
                                     controls
                                     className="w-full h-full"
                                     onPlay={() => handlePlay(testimonial.id)}
+                                    poster={testimonial.poster}
                                 />
                             </div>
                         </motion.div>
