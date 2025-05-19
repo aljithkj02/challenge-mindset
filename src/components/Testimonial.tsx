@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FiRefreshCw } from "react-icons/fi";
 import Thumb1 from '../assets/thumb1.jpg'
 import Thumb2 from '../assets/thumb2.jpg'
-import Thumb3 from '../assets/thumb3.jpg'
+// import Thumb3 from '../assets/thumb3.jpg'
 import Thumb4 from '../assets/thumb4.jpg'
 
 const testimonials = [
@@ -22,11 +22,11 @@ const testimonials = [
         videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747564223/Praseetha_online-video-cutter.com_1_b5n34u.mp4",
         poster: Thumb4
     },
-    {
-        id: 4,
-        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562811/vargees.mp4",
-        poster: Thumb3
-    },
+    // {
+    //     id: 4,
+    //     videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562811/vargees.mp4",
+    //     poster: Thumb3
+    // },
 ];
 
 export const TestimonialSection = () => {
