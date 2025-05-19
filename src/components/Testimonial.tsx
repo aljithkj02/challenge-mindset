@@ -19,13 +19,13 @@ const testimonials = [
     },
     {
         id: 3,
-        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562811/vargees.mp4",
-        poster: Thumb3
+        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747564223/Praseetha_online-video-cutter.com_1_b5n34u.mp4",
+        poster: Thumb4
     },
     {
         id: 4,
-        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747564223/Praseetha_online-video-cutter.com_1_b5n34u.mp4",
-        poster: Thumb4
+        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562811/vargees.mp4",
+        poster: Thumb3
     },
 ];
 
