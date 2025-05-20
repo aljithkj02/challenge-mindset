@@ -11,9 +11,6 @@ export const Hero = () => {
 
     return (
         <section className="relative bg-black text-white px-6 md:px-12 pt-28 text-center overflow-hidden">
-            {/* Optional background overlay */}
-            {/* <div className="absolute inset-0 bg-[url('/hero-bg.jpg')] bg-cover bg-center opacity-5" /> */}
-
             <div className="relative z-10 max-w-4xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -30,8 +27,8 @@ export const Hero = () => {
             </div>
 
             <div className="text-center space-y-6 my-10">
-                <div className="relative group aspect-w-16 aspect-h-9 rounded-3xl overflow-hidden shadow-2xl">
-                    {/* Reload Button */}
+                <div className="relative group aspect-w-16 aspect-h-9 rounded-3xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
+
                     <button
                         onClick={handleReload}
                         className="absolute top-2 right-2 z-10 opacity-0 group-hover:opacity-100 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition"
@@ -40,19 +37,16 @@ export const Hero = () => {
                         <FiRefreshCw className="w-5 h-5 cursor-pointer" />
                     </button>
 
-                    {/* Iframe */}
                     <div className="max-w-4xl mx-auto aspect-video">
                         <iframe
                             key={`hero-video-${reloadKey}`}
                             className="w-full h-full"
-                            src="https://drive.google.com/file/d/196cOpllsChCZV4KLQNMSaq8Qyp4NQejY/preview"
+                            src="https://www.youtube.com/embed/RQJCvOMPACk"
                             title="Course Overview Video"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         />
                     </div>
-
-
                 </div>
             </div>
         </section>
