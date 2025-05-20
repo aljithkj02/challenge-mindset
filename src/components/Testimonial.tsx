@@ -66,7 +66,7 @@ export const TestimonialSection = () => {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    ഇനിയും തീരുമാനമെടുക്കാൻ നിനക്ക് പറ്റിയിട്ടില്ല?
+                    ഇനിയും തീരുമാനമെടുക്കാൻ പറ്റിയിട്ടില്ലേ?
                 </motion.h2>
 
                 <motion.p
