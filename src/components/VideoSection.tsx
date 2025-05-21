@@ -83,6 +83,12 @@ export const VideoSection = () => {
                 </div>
 
             </div>
+
+            <div className="flex justify-center">
+                <button className="bg-white text-black font-bold px-10 py-4 text-lg rounded-full shadow-xl hover:scale-105 transition-all duration-300">
+                    Join The Challenge
+                </button>
+            </div>
         </section>
     );
 };
