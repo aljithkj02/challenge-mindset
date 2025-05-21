@@ -72,7 +72,7 @@ export const VideoSection = () => {
                                 <iframe
                                     key={`hero-video-${reloadKey}`}
                                     className="w-full h-full"
-                                    src="https://www.youtube.com/embed/zikho0hZamI?autoplay=1"
+                                    src="https://www.youtube.com/embed/h8G8LHvanBc?autoplay=1"
                                     title="Course Overview Video"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
