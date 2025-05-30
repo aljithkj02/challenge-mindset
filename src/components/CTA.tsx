@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const CTA = () => {
     return (
-        <section className="bg-gradient-to-br from-indigo-700 via-purple-800 to-pink-700 py-20 px-8 text-center text-white relative overflow-hidden">
+        <section className="bg-gradient-to-br bg-black py-20 px-8 text-center text-white relative overflow-hidden">
             <motion.div
                 className="max-w-3xl mx-auto z-10 relative"
                 initial={{ opacity: 0, y: 30 }}

@@ -17,7 +17,7 @@ export const Hero = () => {
     };
 
     return (
-        <section className="relative bg-black text-white px-6 md:px-12 pt-28 text-center overflow-hidden">
+        <section className="relative bg-blue-950 text-white px-6 md:px-12 pt-28 text-center overflow-hidden">
             <div className="relative z-10 max-w-4xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -55,7 +55,7 @@ export const Hero = () => {
                                     className="w-full h-full object-cover"
                                 />
                                 {/* Optional: Add Play button overlay */}
-                                <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
                                     <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>

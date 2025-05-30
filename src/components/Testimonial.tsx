@@ -54,7 +54,7 @@ export const TestimonialSection = () => {
     };
 
     return (
-        <section className="relative bg-black text-white py-28 px-6 md:px-12 overflow-hidden">
+        <section className="relative bg-blue-950 text-white py-28 px-6 md:px-12 overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 bg-[url('/testimonial-bg.jpg')] bg-cover bg-center opacity-5" />
 
