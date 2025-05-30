@@ -61,11 +61,11 @@ export const VideoSection = () => {
                                     className="w-full h-full object-cover"
                                 />
                                 {/* Optional: Add Play button overlay */}
-                                {/* <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                                <div className="absolute inset-0 flex items-center justify-center bg-black/40">
                                     <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
-                                </div> */}
+                                </div>
                             </div>
                         ) : (
                             <div className="aspect-video">
