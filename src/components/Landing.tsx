@@ -5,7 +5,6 @@ import {
     FaStar,
     FaCheckCircle,
     FaUsers,
-    FaClock,
     FaArrowRight,
     FaQuoteLeft,
     FaPhone,
@@ -18,13 +17,11 @@ import {
     FaShieldAlt,
     FaLock,
     FaInfinity,
-    FaHeart,
 } from 'react-icons/fa';
 import { FiRefreshCw } from "react-icons/fi";
 import Thumb1 from '../assets/thumbFirst.jpg'
 
 const Landing = () => {
-    const [isVisible, setIsVisible] = useState(false);
     const [timeLeft, setTimeLeft] = useState({
         hours: 23,
         minutes: 45,
@@ -44,7 +41,6 @@ const Landing = () => {
     };
 
     useEffect(() => {
-        setIsVisible(true);
 
         // Countdown timer
         const timer = setInterval(() => {
@@ -99,45 +95,6 @@ const Landing = () => {
             content: "പഠനത്തിൽ ഫോക്കസ് ഇല്ലായിരുന്നു, പരീക്ഷയിൽ എപ്പോഴും ഫെയിൽ. ഈ കോഴ്‌സിലൂടെ എന്റെ കോൺസൺട്രേഷൻ പവർ 10 ഇരട്ടി ആയി. ഇപ്പോൾ ക്ലാസ്സിൽ ഫസ്റ്റ് റാങ്ക്!",
             rating: 5,
             achievement: "ക്ലാസ്സ് ഫസ്റ്റ് റാങ്ക്"
-        }
-    ];
-
-    const courseModules = [
-        {
-            day: "Day 1-5",
-            title: "മൈൻഡ് റീസെറ്റ് ഫൗണ്ടേഷൻ",
-            description: "നെഗറ്റീവ് ചിന്തകൾ പൂർണമായി നീക്കം ചെയ്ത് പോസിറ്റീവ് മൈൻഡ്സെറ്റ് സൃഷ്ടിക്കുക",
-            techniques: ["ന്യൂറോ-റീപ്രോഗ്രാമിംഗ്", "സബ്കൺഷ്യസ് ക്ലീനിംഗ്", "എനർജി ആക്ടിവേഷൻ"]
-        },
-        {
-            day: "Day 6-10",
-            title: "വിഷൻ & ഗോൾ മാസ്റ്ററി",
-            description: "നിങ്ങളുടെ സ്വപ്നങ്ങൾ വ്യക്തമാക്കി അതിലേക്കുള്ള പാത തയ്യാറാക്കുക",
-            techniques: ["വിഷൻ ബോർഡ് ക്രിയേഷൻ", "SMART ഗോൾ സെറ്റിംഗ്", "മാനിഫെസ്റ്റേഷൻ ടെക്‌നിക്"]
-        },
-        {
-            day: "Day 11-15",
-            title: "ഫിയർ & ലിമിറ്റിംഗ് ബിലീഫ് എലിമിനേഷൻ",
-            description: "നിങ്ങളെ പിന്നോട്ട് നിർത്തുന്ന ഭയങ്ങളും വിശ്വാസങ്ങളും നീക്കം ചെയ്യുക",
-            techniques: ["ഫിയർ ഫേസിംഗ് എക്സർസൈസ്", "ബിലീഫ് റീസ്ട്രക്ചറിംഗ്", "കോൺഫിഡൻസ് ബിൽഡിംഗ്"]
-        },
-        {
-            day: "Day 16-20",
-            title: "ഹാബിറ്റ് ട്രാൻസ്ഫോർമേഷൻ & ഡിസിപ്ലിൻ",
-            description: "വിജയകരമായ ദിനചര്യകൾ സൃഷ്ടിച്ച് സ്വയം അച്ചടക്കം വികസിപ്പിക്കുക",
-            techniques: ["21-ദിവസ ഹാബിറ്റ് ലൂപ്", "മോർണിംഗ് & നൈറ്റ് റൂട്ടീൻ", "വിൽപവർ എൻഹാൻസ്മെന്റ്"]
-        },
-        {
-            day: "Day 21-25",
-            title: "എനർജി മാനേജ്മെന്റ് & ഫോക്കസ് മാസ്റ്ററി",
-            description: "നിങ്ങളുടെ എനർജി ലെവൽ പരമാവധി ആക്കി ലേസർ ഫോക്കസ് നേടുക",
-            techniques: ["എനർജി ഓഡിറ്റിംഗ്", "ഡീപ് വർക്ക് ടെക്‌നിക്", "മെഡിറ്റേറ്റീവ് ഫോക്കസിംഗ്"]
-        },
-        {
-            day: "Day 26-30",
-            title: "ആക്ഷൻ മാസ്റ്ററി & റിസൾട്ട് ജനറേഷൻ",
-            description: "എല്ലാം ഒരുമിച്ച് ചേർത്ത് നിർത്താനാവാത്ത റിസൾട്ട് മെഷീൻ ആകുക",
-            techniques: ["എക്‌സിക്യൂഷൻ സ്ട്രാറ്റജി", "റിസൾട്ട് ട്രാക്കിംഗ്", "സക്സസ് മൾട്ടിപ്ലിക്കേഷൻ"]
         }
     ];
 
