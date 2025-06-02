@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Thumb2 from '../assets/thumbSecond.jpg'
 import {
@@ -7,7 +7,7 @@ import {
     FaUsers,
     FaArrowRight,
     FaQuoteLeft,
-   FaChevronLeft, FaChevronRight
+    FaChevronLeft, FaChevronRight
 } from 'react-icons/fa';
 import { FiRefreshCw } from "react-icons/fi";
 import Thumb1 from '../assets/thumbFirst.jpg'
@@ -28,6 +28,7 @@ const Landing = () => {
     const [isPlaying2, setIsPlaying2] = useState(false);
 
     const [isPaused, setIsPaused] = useState(false);
+    const intervalRef = useRef(null);
 
     const handlePlay2 = () => {
         setIsPlaying2(true);
@@ -56,12 +57,25 @@ const Landing = () => {
     };
 
     useEffect(() => {
-        if (isPaused) return;
+        if (isPaused) {
+            // @ts-ignore
+            clearInterval(intervalRef.current);
+            return;
+        };
 
-        const interval = setInterval(() => {
+        // @ts-ignore
+        if (intervalRef.current) {
+            // @ts-ignore
+            clearInterval(intervalRef.current);
+        }
+
+        // @ts-ignore
+        intervalRef.current = setInterval(() => {
             setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
         }, 5000);
-        return () => clearInterval(interval);
+
+        // @ts-ignore
+        return () => clearInterval(intervalRef.current);
     }, [isPaused]);
 
     useEffect(() => {
@@ -80,14 +94,8 @@ const Landing = () => {
             });
         }, 1000);
 
-        // Testimonial rotator
-        const testimonialTimer = setInterval(() => {
-            setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
-        }, 4000);
-
         return () => {
             clearInterval(timer);
-            clearInterval(testimonialTimer);
         };
     }, []);
 
@@ -157,7 +165,7 @@ const Landing = () => {
             >
                 <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                     <motion.div
-                        className="text-[22px] font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent"
+                        className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent"
                         whileHover={{ scale: 1.05 }}
                     >
                         🧠 Challenge Mindset
@@ -165,7 +173,7 @@ const Landing = () => {
                     <motion.button
                         whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(239,68,68,0.3)" }}
                         whileTap={{ scale: 0.95 }}
-                        className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all"
+                        className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 sm:px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all"
                     >
                         🔥 Buy Now
                     </motion.button>
@@ -200,7 +208,7 @@ const Landing = () => {
                             </motion.div>
 
                             <motion.h1
-                                className="text-5xl lg:text-7xl font-bold mb-6 leading-tight"
+                                className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight"
                                 initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3 }}
@@ -223,7 +231,7 @@ const Landing = () => {
                             </motion.h1>
 
                             <motion.p
-                                className="text-xl mb-8 text-gray-700 leading-relaxed"
+                                className="text-lg sm:text-xl mb-8 text-gray-700 leading-relaxed"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.4 }}
@@ -357,12 +365,12 @@ const Landing = () => {
                         viewport={{ once: true }}
                         className="text-center mb-12"
                     >
-                        <h2 className="text-4xl font-bold mb-6">
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-6">
                             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                                 📚 30 ദിവസത്തെ കംപ്ലീറ്റ് ട്രാൻസ്ഫോർമേഷൻ പ്ലാൻ
                             </span>
                         </h2>
-                        <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                        <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
                             ഓരോ ദിവസവും സയന്റിഫിക്കായി ഡിസൈൻ ചെയ്ത ടെക്‌നിക്കുകൾ ഉപയോഗിച്ച്
                             നിങ്ങളുടെ മനസ്സിനെ വിജയത്തിന്റെ പവർഹൗസ് ആക്കി മാറ്റുക
                         </p>
@@ -428,12 +436,12 @@ const Landing = () => {
                         viewport={{ once: true }}
                         className="text-center mb-12"
                     >
-                        <h2 className="text-4xl font-bold mb-6">
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-6">
                             <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                                 🎁 Special Bonus Package (Value: ₹12,000)
                             </span>
                         </h2>
-                        <p className="text-xl text-gray-700">
+                        <p className="text-lg sm:text-xl text-gray-700">
                             ഇന്ന് ഓർഡർ ചെയ്യുന്നവർക്ക് ഈ അമൂല്യമായ ബോണസുകൾ <strong className="text-red-600">ഫ്രീയായി!</strong>
                         </p>
                     </motion.div>
@@ -536,7 +544,7 @@ const Landing = () => {
                             <span className="text-indigo-600 font-semibold text-lg">Success Stories</span>
                             <HiSparkles className="text-yellow-500 text-2xl" />
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
                             <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
                                 🎯 ഇവരെല്ലാം നേടിയത് നിങ്ങൾക്കും നേടാം!
                             </span>
@@ -620,8 +628,8 @@ const Landing = () => {
                                         key={index}
                                         onClick={() => setCurrentTestimonial(index)}
                                         className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial
-                                                ? 'bg-gradient-to-r from-blue-500 to-indigo-500 scale-125 shadow-lg'
-                                                : 'bg-gray-300 hover:bg-gray-400'
+                                            ? 'bg-gradient-to-r from-blue-500 to-indigo-500 scale-125 shadow-lg'
+                                            : 'bg-gray-300 hover:bg-gray-400'
                                             }`}
                                     />
                                 ))}
@@ -646,7 +654,7 @@ const Landing = () => {
                     >
                         <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm rounded-full px-6 py-3 border border-white/40 shadow-lg">
                             <HiSparkles className="text-yellow-500" />
-                            <span className="text-gray-700 font-medium">നിങ്ങളുടെ സക്സസ് സ്റ്റോറി എഴുതാനുള്ള സമയം എത്തി!</span>
+                            <span className="text-gray-700 font-medium">നിങ്ങളുടെ Success story എഴുതാനുള്ള സമയം എത്തി!</span>
                             <HiSparkles className="text-yellow-500" />
                         </div>
                     </motion.div>
@@ -661,10 +669,10 @@ const Landing = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-4xl font-bold mb-6">
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-6">
                             🔥 ഇനിയും കാത്തിരിക്കേണ്ട!
                         </h2>
-                        <p className="text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+                        <p className="text-xl sm:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
                             30 ദിവസം കൊണ്ട് നിങ്ങളുടെ ജീവിതത്തിൽ <strong>വിപ്ലവകരമായ മാറ്റം</strong>
                             കൊണ്ടുവരാൻ തയ്യാറാണോ? ഇന്നു തന്നെ Join ചെയ്യൂ!
                         </p>
@@ -679,10 +687,10 @@ const Landing = () => {
                         <motion.button
                             whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-white text-red-600 px-4 py-6 rounded-full text-xl font-bold flex items-center justify-center gap-2 mx-auto hover:bg-yellow-100 transition-all shadow-2xl"
+                            className="bg-white text-red-600 px-4 py-4 sm:py-6 rounded-full text-lg sm:text-xl font-bold flex items-center justify-center gap-2 mx-auto hover:bg-yellow-100 transition-all shadow-2xl"
                         >
                             <FaFire />
-                            ഇപ്പോൾ തന്നെ വാങ്ങുക
+                                ഇപ്പോൾ തന്നെ വാങ്ങുക
                             <FaArrowRight />
                         </motion.button>
 
