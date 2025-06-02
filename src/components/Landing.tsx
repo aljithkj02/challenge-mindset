@@ -7,13 +7,7 @@ import {
     FaUsers,
     FaArrowRight,
     FaQuoteLeft,
-    FaPhone,
-    FaEnvelope,
-    FaInstagram,
-    FaWhatsapp,
-    FaShieldAlt,
-    FaLock,
-    FaInfinity, FaChevronLeft, FaChevronRight
+   FaChevronLeft, FaChevronRight
 } from 'react-icons/fa';
 import { FiRefreshCw } from "react-icons/fi";
 import Thumb1 from '../assets/thumbFirst.jpg'

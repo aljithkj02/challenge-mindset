@@ -1,10 +1,10 @@
-import { CTA } from "./components/CTA"
-import { Footer } from "./components/Footer"
-import { Hero } from "./components/Hero"
+// import { CTA } from "./components/CTA"
+// import { Footer } from "./components/Footer"
+// import { Hero } from "./components/Hero"
 import Landing from "./components/Landing"
-import { Navbar } from "./components/Navbar"
-import { TestimonialSection } from "./components/Testimonial"
-import { VideoSection } from "./components/VideoSection"
+// import { Navbar } from "./components/Navbar"
+// import { TestimonialSection } from "./components/Testimonial"
+// import { VideoSection } from "./components/VideoSection"
 
 
 function App() {
