@@ -222,11 +222,11 @@ const Landing = () => {
                                 </span>
                                 <br />
                                 <span className="text-gray-800">
-                                    മൈൻഡ്സെറ്റ്
+                                    Mindset
                                 </span>
                                 <br />
                                 <span className="text-gray-800">
-                                    പൂർണമായി മാറ്റുക!
+                                    പൂർണമായി മാറ്റാം!
                                 </span>
                             </motion.h1>
 
