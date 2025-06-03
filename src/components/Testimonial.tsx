@@ -54,13 +54,13 @@ export const TestimonialSection = () => {
     };
 
     return (
-        <section className="relative bg-blue-950 text-white py-28 px-6 md:px-12 overflow-hidden">
+        <section className="relative bg-black text-white py-28 px-6 md:px-12 overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 bg-[url('/testimonial-bg.jpg')] bg-cover bg-center opacity-5" />
 
             <div className="relative z-10 max-w-6xl mx-auto text-center">
                 <motion.h2
-                    className="text-2xl md:text-4xl font-semibold text-white mb-4"
+                    className="text-2xl md:text-4xl font-semibold bg-gradient-to-r from-[#FFD700] via-[#FFC300] to-[#FFB000] text-transparent bg-clip-text mb-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}

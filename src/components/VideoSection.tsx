@@ -17,13 +17,13 @@ export const VideoSection = () => {
     };
 
     return (
-        <section className="bg-blue-950 px-6 md:px-20 py-16 space-y-16 text-white">
+        <section className="bg-black px-6 md:px-20 py-16 space-y-16 text-white">
 
             {/* Award Banner Section */}
             <div className="text-center space-y-6">
                 <h2 className="text-2xl md:text-4xl font-bold text-white leading-relaxed">
                     നാഷണൽ അവാർഡ് കരസ്ഥമാക്കിയ <br />{" "}
-                    <span className="text-pink-500">കേരളത്തിലെ No 1 കോഴ്സ്</span>
+                    <span className="bg-gradient-to-r from-[#FFD700] via-[#FFC300] to-[#FFB000] text-transparent bg-clip-text">കേരളത്തിലെ No 1 കോഴ്സ്</span>
                 </h2>
                 <div className="w-full max-w-3xl mx-auto">
                     <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
@@ -85,9 +85,13 @@ export const VideoSection = () => {
             </div>
 
             <div className="flex justify-center">
-                <button className="bg-white text-black font-bold px-10 py-4 text-lg rounded-full shadow-xl hover:scale-105 transition-all duration-300">
+                {/* <button className="bg-white text-black font-bold px-10 py-4 text-lg rounded-full shadow-xl hover:scale-105 transition-all duration-300">
+                    Join The Challenge
+                </button> */}
+                <button className="bg-black text-[#FFD700] font-bold px-10 py-4 text-lg rounded-full border border-[#FFD700] shadow-xl hover:bg-[#FFD700] hover:text-black transition-all duration-300 hover:scale-105">
                     Join The Challenge
                 </button>
+
             </div>
         </section>
     );

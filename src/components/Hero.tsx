@@ -26,7 +26,7 @@ export const Hero = () => {
                     viewport={{ once: true }}
                     className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl px-8 py-10 shadow-lg"
                 >
-                    <h2 className="text-xl md:text-3xl font-medium italic leading-relaxed text-[#FFD700] tracking-wide">
+                    <h2 className="text-xl md:text-3xl font-medium italic leading-relaxed bg-gradient-to-r from-[#FFD700] via-[#FFC300] to-[#FFB000] text-transparent bg-clip-text tracking-wide">
                         എല്ലാരും പിന്നെയും നിന്നിൽ സംശയിക്കാൻ തുടങ്ങി. <br />
                         നീ ആരാണെന്ന് അവരെ ഓർമിപ്പിച്ചു കൊള്ളുക!
                     </h2>
