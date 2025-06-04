@@ -88,9 +88,11 @@ export const VideoSection = () => {
                 {/* <button className="bg-white text-black font-bold px-10 py-4 text-lg rounded-full shadow-xl hover:scale-105 transition-all duration-300">
                     Join The Challenge
                 </button> */}
-                <button className="bg-black text-[#FFD700] font-bold px-10 py-4 text-lg rounded-full border border-[#FFD700] shadow-xl hover:bg-[#FFD700] hover:text-black transition-all duration-300 hover:scale-105">
-                    Join The Challenge
-                </button>
+                <a href="https://superprofile.bio/course/challenge-mindset-building">
+                    <button className="bg-black cursor-pointer text-[#FFD700] font-bold px-10 py-4 text-lg rounded-full border border-[#FFD700] shadow-xl hover:bg-[#FFD700] hover:text-black transition-all duration-300 hover:scale-105">
+                        Join The Challenge
+                    </button>
+                </a>
 
             </div>
         </section>
