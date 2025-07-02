@@ -6,20 +6,24 @@ import Thumb2 from '../assets/thumb2.jpg'
 // import Thumb3 from '../assets/thumb3.jpg'
 import Thumb4 from '../assets/thumb4.jpg'
 
+import Video1 from '../assets/video1.mp4'
+import Video2 from '../assets/video2.mp4'
+import Video3 from '../assets/video3.mp4'
+
 const testimonials = [
     {
         id: 1,
-        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747562537/%E0%B4%9C%E0%B5%80%E0%B4%B5%E0%B4%BF%E0%B4%A4%E0%B4%82_%E0%B4%AE%E0%B4%BE%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BF_%E0%B4%AE%E0%B4%B1%E0%B4%BF%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%B5%E0%B4%B0%E0%B5%81%E0%B4%9F%E0%B5%86_%E0%B4%85%E0%B4%A8%E0%B5%81%E0%B4%AD%E0%B4%B5%E0%B4%82_%E0%B4%87%E0%B4%A4%E0%B4%BE_%E0%B4%A8%E0%B4%BF%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B5%81%E0%B4%82_Ready_%E0%B4%86%E0%B4%A3%E0%B5%8B_muynko.mp4",
+        videoUrl: Video1,
         poster: Thumb1
     },
     {
         id: 2,
-        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747563959/Sreelakshmi_online-video-cutter.com_1_ruadp3.mp4",
+        videoUrl: Video2,
         poster: Thumb2
     },
     {
         id: 3,
-        videoUrl: "https://res.cloudinary.com/dquq0mrkt/video/upload/v1747564223/Praseetha_online-video-cutter.com_1_b5n34u.mp4",
+        videoUrl: Video3,
         poster: Thumb4
     },
     // {
