@@ -68,7 +68,7 @@ export const TestimonialSection = () => {
 
             <div className="relative z-10 max-w-6xl mx-auto text-center">
                 <motion.h2
-                    className="text-2xl md:text-4xl font-semibold bg-gradient-to-r from-[#FFD700] via-[#FFC300] to-[#FFB000] text-transparent bg-clip-text mb-4"
+                    className="text-2xl md:text-4xl font-semibold bg-gradient-to-r text-white bg-clip-text mb-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
