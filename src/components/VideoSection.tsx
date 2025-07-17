@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiRefreshCw } from "react-icons/fi";
 import Award from "../assets/award.jpg";
 import Thumb2 from '../assets/thumbSecond.jpg'
+import b from '../assets/b.jpeg'
 
 export const VideoSection = () => {
     const [reloadKey, setReloadKey] = useState(0);
@@ -17,7 +18,10 @@ export const VideoSection = () => {
     };
 
     return (
-        <section className="bg-black px-6 md:px-20 py-16 space-y-16 text-white">
+        <section className="px-6 md:px-20 py-16 space-y-16 text-white relative"
+
+            style={{ backgroundImage: `url(${b})`, backgroundSize: 'cover' }}
+        >
 
             {/* Award Banner Section */}
             <div className="text-center space-y-6">
@@ -37,8 +41,11 @@ export const VideoSection = () => {
             </div>
 
             {/* Video Section */}
-            <div className="text-center space-y-6">
-                <h3 className="text-4xl font-semibold">FIRST CHALLENGE </h3>
+            <div className="text-left space-y-6">
+                {/* <h3 className="text-4xl font-semibold">FIRST CHALLENGE </h3> */}
+                <h3 className="text-2xl font-semibold">
+                    First challenge നിങ്ങൾക്കായി ഇവിടെ നൽകുന്നു
+                </h3>
 
                 <div className="relative group aspect-w-16 aspect-h-9 rounded-3xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
 
@@ -90,7 +97,7 @@ export const VideoSection = () => {
                 </button> */}
                 <a href="https://superprofile.bio/course/challenge-mindset-building">
                     <button className="bg-black cursor-pointer text-[#FFD700] font-bold px-10 py-4 text-lg rounded-full border border-[#FFD700] shadow-xl hover:bg-[#FFD700] hover:text-black transition-all duration-300 hover:scale-105">
-                        Join The Challenge
+                        Yes, I’m Ready for the Change!
                     </button>
                 </a>
 

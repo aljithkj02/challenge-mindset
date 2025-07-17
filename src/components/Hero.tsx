@@ -2,6 +2,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FiRefreshCw } from "react-icons/fi";
 import Thumb1 from '../assets/thumbFirst.jpg'
+// import Blue from '../assets/blue.jpeg'
+// import White from '../assets/white.jpeg'
+// import White2 from '../assets/white2.jpeg'
+import b from '../assets/b.jpeg'
 
 export const Hero = () => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -17,23 +21,29 @@ export const Hero = () => {
     };
 
     return (
-        <section className="relative  bg-black text-white px-6 md:px-12 pt-28 text-center overflow-hidden">
+        <section className={`relative text-white px-6 md:px-12 pt-14 text-center overflow-hidden z-10`}
+            style={{ backgroundImage: `url(${b})`, backgroundSize: 'cover' }}
+        >
             <div className="relative z-10 max-w-4xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
-                    className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl px-8 py-10 shadow-lg"
+                    // style={{ backgroundImage: `url(${Blue})` }}
+                    className="bg-white/5 border object-cover border-white/10 backdrop-blur-md rounded-2xl px-8 py-10 shadow-lg"
                 >
-                    <h2 className="text-xl md:text-3xl font-medium italic leading-relaxed bg-gradient-to-r from-[#FFD700] via-[#FFC300] to-[#FFB000] text-transparent bg-clip-text tracking-wide">
-                        എല്ലാരും പിന്നെയും നിന്നിൽ സംശയിക്കാൻ തുടങ്ങി. <br />
-                        നീ ആരാണെന്ന് അവരെ ഓർമിപ്പിച്ചു കൊള്ളുക!
+                    <h2 className="font-['Chilanka',_sans-serif] text-xl md:text-3xl font-bold italic leading-relaxed bg-gradient-to-r from-[#FFD700] via-[#FFC300] to-[#FFB000] text-transparent bg-clip-text tracking-wide">
+                        {/* എല്ലാരും പിന്നെയും നിന്നിൽ സംശയിക്കാൻ തുടങ്ങി. <br />
+                        നീ ആരാണെന്ന് അവരെ ഓർമിപ്പിച്ചു കൊള്ളുക! */}
+                        നിന്നിലെ വിശ്വാസം നഷ്ടപ്പെട്ടവർക്ക് മുന്നിൽ, <br />
+                        നീ ആരാണെന്ന് ഒരിക്കൽക്കൂടി തെളിയിക്കൂ!
                     </h2>
                 </motion.div>
             </div>
 
-            <div className="text-center space-y-6 my-10">
+            <div className="text-left space-y-6 my-10">
+                <p className="text-2xl pt-3 font-semibold">എന്താണ് ഈ 30 Days Challenge mindset building?</p>
                 <div className="relative group aspect-w-16 aspect-h-9 rounded-3xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
 
                     {isPlaying && (
@@ -74,6 +84,15 @@ export const Hero = () => {
                             </div>
                         )}
                     </div>
+                </div>
+
+                <div className="flex justify-center">
+                    <a href="https://superprofile.bio/course/challenge-mindset-building">
+                        <button className="bg-black cursor-pointer text-[#FFD700] font-bold px-10 py-4 text-lg rounded-full border border-[#FFD700] shadow-xl hover:bg-[#FFD700] hover:text-black transition-all duration-300 hover:scale-105">
+                            Join The Challenge
+                        </button>
+                    </a>
+
                 </div>
             </div>
         </section>

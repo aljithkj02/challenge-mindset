@@ -9,6 +9,7 @@ import Thumb4 from '../assets/thumb4.jpg'
 import Video1 from '../assets/video1.mp4'
 import Video2 from '../assets/video2.mp4'
 import Video3 from '../assets/video3.mp4'
+import b from '../assets/b.jpeg'
 
 const testimonials = [
     {
@@ -58,7 +59,10 @@ export const TestimonialSection = () => {
     };
 
     return (
-        <section className="relative bg-black text-white py-28 px-6 md:px-12 overflow-hidden">
+        <section className="relative text-white px-6 md:px-12 overflow-hidden"
+
+            style={{ backgroundImage: `url(${b})`, backgroundSize: 'cover' }}
+        >
             {/* Background */}
             <div className="absolute inset-0 bg-[url('/testimonial-bg.jpg')] bg-cover bg-center opacity-5" />
 
@@ -70,7 +74,8 @@ export const TestimonialSection = () => {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    ഇനിയും തീരുമാനമെടുക്കാൻ പറ്റിയിട്ടില്ലേ?
+                    {/* ഇനിയും തീരുമാനമെടുക്കാൻ പറ്റിയിട്ടില്ലേ? */}
+                    Real People. Real Change.
                 </motion.h2>
 
                 <motion.p

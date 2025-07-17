@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const CTA = () => {
     return (
-        <section className="bg-gradient-to-br bg-black py-20 px-8 text-center text-white relative overflow-hidden">
+        <section className="bg-gradient-to-br py-20 px-8 text-center text-white relative overflow-hidden">
             <motion.div
                 className="max-w-3xl mx-auto z-10 relative"
                 initial={{ opacity: 0, y: 30 }}
@@ -11,8 +11,13 @@ export const CTA = () => {
                 transition={{ duration: 0.7 }}
                 viewport={{ once: true }}
             >
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">This Is More Than a Course — It's a Revolution.</h2>
-                <p className="mb-8 text-lg md:text-xl text-white/80">Step into your highest self. Start today.</p>
+                <h2 className="text-2xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">
+                    {/* This Is More Than a Course — It's a Revolution. */}
+                    ജീവിതത്തിലെ ഈ മാറ്റം വൈകുന്നത് എന്തുകൊണ്ട്? ഉത്തരം നിൻ്റെ മൈൻഡ്‌സെറ്റിലാണ്!
+                </h2>
+                {/* <p className="mb-8 text-lg md:text-xl text-white/80">
+                    Step into your highest self. Start today.
+                </p> */}
                 {/* <button className="bg-white text-black font-bold px-10 py-4 text-lg rounded-full shadow-xl hover:scale-105 transition-all duration-300">
                     Join The Challenge
                 </button> */}
