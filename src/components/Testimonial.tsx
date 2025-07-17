@@ -66,26 +66,26 @@ export const TestimonialSection = () => {
             {/* Background */}
             <div className="absolute inset-0 bg-[url('/testimonial-bg.jpg')] bg-cover bg-center opacity-5" />
 
-            <div className="relative z-10 max-w-6xl mx-auto text-center">
+            <div className="relative z-10 max-w-6xl mx-auto text-left">
                 <motion.h2
-                    className="text-2xl md:text-4xl font-semibold bg-gradient-to-r text-white bg-clip-text mb-4"
+                    className="text-2xl md:text-4xl font-semibold bg-gradient-to-r text-white bg-clip-text mb-2"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
                     {/* ഇനിയും തീരുമാനമെടുക്കാൻ പറ്റിയിട്ടില്ലേ? */}
-                    Real People. Real Change.
+                    Real People, Real Change.
                 </motion.h2>
 
                 <motion.p
-                    className="text-white/60 mb-12 text-sm md:text-base"
+                    className="text-white/80 mb-12 text-sm md:text-base"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    Here’s what our students are saying
+                    Here’s what our students are saying...
                 </motion.p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

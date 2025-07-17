@@ -22,7 +22,7 @@ export const CTA = () => {
                     Join The Challenge
                 </button> */}
                 <a href="https://superprofile.bio/course/challenge-mindset-building">
-                    <button className="bg-black cursor-pointer text-white font-bold px-10 py-4 text-lg rounded-full border border-white shadow-xl hover:bg-[#FFD700] hover:text-black transition-all duration-300 hover:scale-105">
+                    <button className="bg-[#FFD700] cursor-pointer text-black font-bold px-10 py-4 text-lg rounded-full border transition-all duration-300 hover:scale-105">
                         Join The Challenge
                     </button>
                 </a>

@@ -1,7 +1,7 @@
 import { CTA } from "./components/CTA"
 import { Footer } from "./components/Footer"
 import { Hero } from "./components/Hero"
-// import { Navbar } from "./components/Navbar"
+import { Navbar } from "./components/Navbar"
 import { TestimonialSection } from "./components/Testimonial"
 import { VideoSection } from "./components/VideoSection"
 // import b from './assets/b.jpeg'
@@ -21,7 +21,7 @@ function App() {
                 }}
                 className="fixed inset-0 z-0"
             ></div> */}
-            {/* <Navbar /> */}
+            <Navbar />
             <Hero />
             <VideoSection />
             <TestimonialSection />

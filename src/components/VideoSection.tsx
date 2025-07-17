@@ -27,7 +27,7 @@ export const VideoSection = () => {
             <div className="text-center space-y-6">
                 <h2 className="text-2xl baloo-chettan-2 md:text-4xl font-bold text-white leading-relaxed">
                     നാഷണൽ അവാർഡ് കരസ്ഥമാക്കിയ <br />{" "}
-                    <span className="bg-gradient-to-r baloo-chettan-2  from-[#FFD700] via-[#FFC300] to-[#FFB000] text-transparent bg-clip-text">കേരളത്തിലെ No 1 കോഴ്സ്</span>
+                    <span className="bg-gradient-to-r baloo-chettan-2  from-[#FFD700] via-[#FFC300] to-[#FFB000] text-transparent bg-clip-text border-b border-[#FFD700]">കേരളത്തിലെ No 1 കോഴ്സ്</span>
                 </h2>
                 <div className="w-full max-w-3xl mx-auto">
                     <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-white/5">
@@ -44,7 +44,7 @@ export const VideoSection = () => {
             <div className="text-left space-y-6">
                 {/* <h3 className="text-4xl font-semibold">FIRST CHALLENGE </h3> */}
                 <h3 className="text-2xl font-semibold baloo-chettan-2">
-                    First challenge നിങ്ങൾക്കായി ഇവിടെ നൽകുന്നു
+                    First challenge നിങ്ങൾക്കായി ഇവിടെ നൽകുന്നു...
                 </h3>
 
                 <div className="relative group aspect-w-16 aspect-h-9 rounded-3xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
@@ -96,7 +96,7 @@ export const VideoSection = () => {
                     Join The Challenge
                 </button> */}
                 <a href="https://superprofile.bio/course/challenge-mindset-building">
-                    <button className="bg-black cursor-pointer text-white font-bold px-10 py-4 text-lg rounded-full border border-white shadow-xl hover:bg-[#FFD700] hover:text-black transition-all duration-300 hover:scale-105">
+                    <button className="bg-[#FFD700] cursor-pointer text-black font-bold px-10 py-4 text-lg rounded-full border shadow-xl black transition-all duration-300 hover:scale-105">
                         Yes, I’m Ready for the Change!
                     </button>
                 </a>
