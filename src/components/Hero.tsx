@@ -8,7 +8,7 @@ import Thumb1 from '../assets/thumbFirst.jpg'
 import b from '../assets/b.jpeg'
 // import { FaQuoteLeft } from "react-icons/fa6";
 // import { FaQuoteRight } from "react-icons/fa6";
-import { FaQuoteLeft } from "react-icons/fa";
+// import { FaQuoteLeft } from "react-icons/fa";
 
 export const Hero = () => {
     const [isPlaying, setIsPlaying] = useState(false);
